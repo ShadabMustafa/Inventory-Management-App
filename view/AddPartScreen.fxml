@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPartController">
+    <children>
+        <Label layoutX="250.0" layoutY="22.0" style="-fx-font-weight: bold;" text="Inventory Management System" textFill="#9e0808">
+            <font>
+                <Font name="Cambria Italic" size="36.0" />
+            </font>
+        </Label>
+        <Button layoutX="792.0" layoutY="370.0" mnemonicParsing="false" onAction="#cancelButton" prefHeight="58.0" prefWidth="103.0" text="Cancel" textFill="#eb0101">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font></Button>
+        <Label layoutX="97.0" layoutY="144.0" style="-fx-font-weight: bold;" text="Add Part" textFill="#1909e5">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="107.0" layoutY="206.0" text="ID">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <Label layoutX="95.0" layoutY="253.0" text="Name">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font></Label>
+        <Label layoutX="89.0" layoutY="297.0" text="Inventory">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font></Label>
+        <Label layoutX="101.0" layoutY="341.0" text="Price">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <Label layoutX="102.0" layoutY="390.0" text="Max">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <Label fx:id="partIdNameLabel" layoutX="89.0" layoutY="437.0" text="Machine ID">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font></Label>
+        <RadioButton fx:id="inHouseRadioButton" layoutX="248.0" layoutY="152.0" mnemonicParsing="false" onAction="#inHouseRadioButton" text="In-House" textFill="#e40808">
+            <toggleGroup>
+                <ToggleGroup fx:id="tgPartType" />
+            </toggleGroup>
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font></RadioButton>
+        <RadioButton fx:id="outsourcedRadioButton" layoutX="362.0" layoutY="152.0" mnemonicParsing="false" onAction="#outsourcedRadioButton" text="Outsourced" textFill="#f20707" toggleGroup="$tgPartType">
+         <font>
+            <Font size="14.0" />
+         </font></RadioButton>
+        <TextField fx:id="partIdText" editable="false" layoutX="197.0" layoutY="202.0" promptText="Auto Gen - Disabled" />
+        <TextField fx:id="partNameText" layoutX="197.0" layoutY="249.0" />
+        <TextField fx:id="partInventoryText" layoutX="197.0" layoutY="293.0" />
+        <TextField fx:id="partPriceText" layoutX="197.0" layoutY="337.0" />
+        <TextField fx:id="partMaxText" layoutX="197.0" layoutY="386.0" />
+        <TextField fx:id="partIdNameText" layoutX="197.0" layoutY="433.0" />
+        <TextField fx:id="partMinText" layoutX="489.0" layoutY="386.0" />
+        <Label layoutX="450.0" layoutY="390.0" text="Min">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font></Label>
+        <Button layoutX="792.0" layoutY="202.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="58.0" prefWidth="103.0" text="Save" textFill="#f50707">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font></Button>
+    </children>
+</AnchorPane>
